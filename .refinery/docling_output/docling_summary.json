@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Class A - CBE Annual Report",
+    "filename": "CBE ANNUAL REPORT 2023-24.pdf",
+    "status": "OK",
+    "conversion_time_s": 2155.0,
+    "markdown_length": 519665,
+    "table_count": 182,
+    "picture_count": 86
+  },
+  {
+    "name": "Class B - DBE Audit (Scanned)",
+    "filename": "Audit Report - 2023.pdf",
+    "status": "OK",
+    "conversion_time_s": 11420.1,
+    "markdown_length": 481402,
+    "table_count": 114,
+    "picture_count": 355
+  },
+  {
+    "name": "Class C - FTA Assessment",
+    "filename": "fta_performance_survey_final_report_2022.pdf",
+    "status": "OK",
+    "conversion_time_s": 1607.5,
+    "markdown_length": 513483,
+    "table_count": 59,
+    "picture_count": 72
+  },
+  {
+    "name": "Class D - Tax Expenditure",
+    "filename": "tax_expenditure_ethiopia_2021_22.pdf",
+    "status": "OK",
+    "conversion_time_s": 375.0,
+    "markdown_length": 151770,
+    "table_count": 29,
+    "picture_count": 16
+  }
+]

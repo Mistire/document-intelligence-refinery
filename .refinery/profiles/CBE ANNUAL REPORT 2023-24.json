@@ -1,0 +1,14 @@
+{
+  "doc_id": "CBE ANNUAL REPORT 2023-24",
+  "filename": "CBE ANNUAL REPORT 2023-24.pdf",
+  "total_pages": 161,
+  "origin_type": "mixed",
+  "layout_complexity": "table_heavy",
+  "language": "en",
+  "domain_hint": "general",
+  "extraction_cost": "needs_layout_model",
+  "avg_char_density": 0.0039719896421217425,
+  "avg_image_ratio": 0.10840207863014442,
+  "total_tables_found": 195,
+  "triage_timestamp": "2026-03-04T17:07:06.088091"
+}

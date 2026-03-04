@@ -1,4 +1,3 @@
-
 ## 1. Extraction Strategy Decision Tree
 
 Based on empirical analysis of the 4 corpus documents:
@@ -18,10 +17,10 @@ flowchart TD
 
 ### Empirical Justification
 
-* Class B had < 20 chars per page on average → scanned.
-* Class A had mixed pages (0 chars + 1500+ chars) → hybrid.
-* Class C had 3000–5000+ chars per page → clearly digital.
-* Class D had consistent digital text but dense numeric tables.
+- Class B had < 20 chars per page on average → scanned.
+- Class A had mixed pages (0 chars + 1500+ chars) → hybrid.
+- Class C had 3000–5000+ chars per page → clearly digital.
+- Class D had consistent digital text but dense numeric tables.
 
 Routing must happen at **page-level**, not only document-level.
 
@@ -35,27 +34,27 @@ Routing must happen at **page-level**, not only document-level.
 
 **Observations:**
 
-* Some pages (cover, final page) had zero extractable text.
-* Core pages had 800–2000+ characters.
-* Tables were detected in financial sections.
-* Minor encoding artifacts (`Â`) present.
+- Some pages (cover, final page) had zero extractable text.
+- Core pages had 800–2000+ characters.
+- Tables were detected in financial sections.
+- Minor encoding artifacts (`Â`) present.
 
 **Table Behavior:**
 
-* Headers generally aligned with numeric data.
-* Financial values extracted correctly.
-* Multi-row headers occasionally split across rows.
+- Headers generally aligned with numeric data.
+- Financial values extracted correctly.
+- Multi-row headers occasionally split across rows.
 
 **Layout Behavior:**
 
-* Multi-column sections exist.
-* Possible interleaving risk if naive text concatenation is used.
+- Multi-column sections exist.
+- Possible interleaving risk if naive text concatenation is used.
 
 **Failure Modes:**
 
-* Encoding artifacts require cleanup.
-* Hybrid nature requires page-level OCR fallback.
-* Multi-column pages may require layout-aware extraction.
+- Encoding artifacts require cleanup.
+- Hybrid nature requires page-level OCR fallback.
+- Multi-column pages may require layout-aware extraction.
 
 **Conclusion:**
 Strategy B (Layout-Aware) with selective OCR fallback.
@@ -68,16 +67,16 @@ This is the most critical discovery.
 
 **Observations:**
 
-* 6/7 sampled pages had zero characters.
-* Image area ~100% per page.
-* No tables detected.
-* Extracted text layer effectively nonexistent.
+- 6/7 sampled pages had zero characters.
+- Image area ~100% per page.
+- No tables detected.
+- Extracted text layer effectively nonexistent.
 
 **Failure Mode:**
 
-* pdfplumber extraction fails completely.
-* Table detection impossible.
-* Downstream chunking would silently ingest empty content.
+- pdfplumber extraction fails completely.
+- Table detection impossible.
+- Downstream chunking would silently ingest empty content.
 
 **Conclusion:**
 Requires Strategy C (Vision AI / OCR).
@@ -91,21 +90,21 @@ This document defines the OCR routing boundary.
 
 **Observations:**
 
-* High character density (0.008–0.01).
-* Thousands of characters per page.
-* Multiple tables detected reliably.
-* Clear hierarchical structure visible in text extraction.
+- High character density (0.008–0.01).
+- Thousands of characters per page.
+- Multiple tables detected reliably.
+- Clear hierarchical structure visible in text extraction.
 
 **Table Behavior:**
 
-* Extracted tables generally well-formed.
-* Some small tables split across pages.
-* Numeric values preserved accurately.
+- Extracted tables generally well-formed.
+- Some small tables split across pages.
+- Numeric values preserved accurately.
 
 **Failure Modes:**
 
-* Some small tables detected as 1-row artifacts.
-* Minor header fragmentation in complex layouts.
+- Some small tables detected as 1-row artifacts.
+- Minor header fragmentation in complex layouts.
 
 **Conclusion:**
 Strategy B (Layout-Aware) preferred for structured parsing.
@@ -117,22 +116,22 @@ Strategy A possible but may lose table structure.
 
 **Observations:**
 
-* Consistent digital text extraction.
-* Dense numeric tables (10–12 columns).
-* Multi-row headers split into fragments.
-* Many empty cells in extracted output (header alignment artifacts).
+- Consistent digital text extraction.
+- Dense numeric tables (10–12 columns).
+- Multi-row headers split into fragments.
+- Many empty cells in extracted output (header alignment artifacts).
 
 **Table Behavior:**
 
-* All numeric values appear present.
-* Columns sometimes misaligned.
-* Header rows fragmented across multiple rows.
+- All numeric values appear present.
+- Columns sometimes misaligned.
+- Header rows fragmented across multiple rows.
 
 **Failure Modes:**
 
-* Complex table headers broken into separate rows.
-* Blank cells where merged cells existed in PDF.
-* Multi-page table continuity not preserved automatically.
+- Complex table headers broken into separate rows.
+- Blank cells where merged cells existed in PDF.
+- Multi-page table continuity not preserved automatically.
 
 **Conclusion:**
 Strategy B required.
@@ -192,9 +191,9 @@ Extraction must precede semantic chunking. Poor extraction leads to garbage LDUs
 
 Observation:
 
-* Running Strategy C on all documents would be wasteful.
-* Class B justifies OCR cost.
-* Others do not.
+- Running Strategy C on all documents would be wasteful.
+- Class B justifies OCR cost.
+- Others do not.
 
 Routing significantly reduces compute cost.
 
@@ -202,29 +201,38 @@ Routing significantly reduces compute cost.
 
 ## 6. Tools Evaluated
 
-| Tool       | Tested | Notes                                                        |
-| ---------- | ------ | ------------------------------------------------------------ |
-| pdfplumber | ✅      | Fast, reliable for digital PDFs, bbox support, good baseline |
-| Docling    | ❌      | Not evaluated in Phase 0                                     |
-| MinerU     | ❌      | Not evaluated in Phase 0                                     |
+| Tool | Tested | Notes |
 
-Future evaluation needed for:
+## 6. Tools Evaluated: Docling vs. pdfplumber
 
-* Complex table reconstruction
-* Multi-column reading order preservation
-* OCR accuracy comparison
+Based on Phase 0 exploration, we compared the lightweight `pdfplumber` against the heavyweight `Docling`.
+
+### Performance & Comparison Table
+
+| Metric                | pdfplumber                           | Docling                              |
+| --------------------- | ------------------------------------ | ------------------------------------ |
+| **Class A (CBE)**     | High speed, misses complex structure | 35m conversion, 182 tables found     |
+| **Class B (Scanned)** | **FAILED (0 chars extracted)**       | **SUCCESS (481k chars, 114 tables)** |
+| **Class C (FTA)**     | Good text, basic tables              | 26m conversion, 59 tables found      |
+| **Class D (Tax)**     | Good text, alignment issues          | 6m conversion, 29 tables found       |
+| **Extraction Speed**  | Near-instant (<1s per page)          | Very slow (15-60s per page)          |
+| **Structure**         | Flat text stream                     | Rich Markdown with TOC + Tables      |
+
+### Key Findings
+
+1.  **The "Scanned" Breakthrough:** Docling successfully OCR'ed the image-only Class B document (`Audit Report - 2023.pdf`), which was completely invisible to `pdfplumber`. This confirms that while expensive (time/compute), a layout-aware/OCR-enabled model is mandatory for our corpus.
+2.  **Table Fidelity:** Docling's markdown export preserves complex table hierarchies and merged cells much better than `pdfplumber`'s raw grid extraction.
+3.  **Escalation Boundary:** `pdfplumber` is useful for the **Triage Agent** (to quickly detect char density), while `Docling` or `MinerU` should be the production default for **Strategy B/C**.
 
 ---
 
 # Final Phase 0 Conclusion
 
-The corpus is structurally heterogeneous.
+The corpus is structurally heterogeneous and represents a "worst-case" scenario for simple extraction.
 
-Key findings:
+**Final Recommendations for Pipeline:**
 
-1. OCR is mandatory for scanned documents (Class B).
-2. Hybrid documents require page-level routing (Class A).
-3. Digital structured reports benefit from layout-aware extraction (Class C, D).
-4. Table extraction quality varies significantly and requires post-processing logic.
-5. Extraction strategy must be adaptive and cost-aware.
-
+1.  **Mandatory OCR/VLM:** Class B confirms we cannot rely on text-layer extraction alone.
+2.  **Phase-Level Routing:** Using `pdfplumber` in the Triage stage to check `char_density < 100` is an effective way to flag documents for "Strategy C" (Vision AI/OCR) before wasting compute.
+3.  **Markdown as Intermediate Format:** Docling's markdown output is a superior input for the **Semantic Chunker** compared to raw text, as it preserves structural delimiters (`#`, `|`, `<!-- image -->`).
+4.  **Compute Warning:** Docling is resource-intensive. Conversion of the 161-page CBE report took over 30 minutes. The production pipeline must support asynchronous/background processing.
