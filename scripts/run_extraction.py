@@ -33,11 +33,11 @@ def main():
         print(f"🏗️ Processing {profile.doc_id} via {profile.extraction_cost}...")
         
         try:
-            output_path = router.route(profile)
+            doc = router.route_and_extract(profile)
             ledger.record_success(
                 profile.doc_id, 
-                profile.extraction_cost.value, 
-                output_path
+                doc.metadata.get("final_strategy", "unknown"), 
+                Path(".refinery/extractions") / profile.doc_id / "extracted.json"
             )
         except Exception as e:
             print(f"❌ Failed to extract {profile.doc_id}: {str(e)}")

@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pydantic import BaseModel, Field
 
 class OriginType(str, Enum):
@@ -28,9 +28,18 @@ class DocumentProfile(BaseModel):
     # The 5 Mandatory Dimensions
     origin_type: OriginType
     layout_complexity: LayoutComplexity
-    language: str = "en"  # Default to english for now
+    language: str = "en"
     domain_hint: str = "general"
     extraction_cost: ExtractionCost
+    
+    # Confidence Metrics (Requested)
+    confidence_scores: Dict[str, float] = Field(
+        default_factory=lambda: {
+            "origin_type": 1.0,
+            "layout_complexity": 1.0,
+            "domain_hint": 1.0
+        }
+    )
     
     # Metadata for debugging
     avg_char_density: float

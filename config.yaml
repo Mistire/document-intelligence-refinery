@@ -1,0 +1,39 @@
+# Document Intelligence Refinery Configuration
+
+# Triage Thresholds (Empirically Derived)
+triage:
+  min_char_count_per_page: 100
+  low_char_density: 0.0005
+  high_char_density: 0.005
+  max_image_area_ratio: 0.50
+  min_table_detection: 2
+
+# Extraction Rules
+extraction:
+  confidence_threshold_a: 0.85
+  confidence_threshold_b: 0.70
+  vlm_max_budget_per_doc: 2.00 # USD
+
+# Chunking Parameters
+chunking:
+  max_tokens_per_chunk: 1024
+  min_tokens_per_chunk: 100
+  overlap_tokens: 50
+
+# Domain Keywords (Hints)
+domain_keywords:
+  financial:
+    [
+      "revenue",
+      "ebitda",
+      "profit",
+      "balance sheet",
+      "audit",
+      "expenditure",
+      "fiscal",
+    ]
+  legal:
+    ["clause", "agreement", "party", "liability", "indemnity", "jurisdiction"]
+  technical:
+    ["architecture", "api", "endpoint", "schema", "protocol", "implementation"]
+  medical: ["patient", "diagnosis", "treatment", "clinic", "dosage", "medical"]

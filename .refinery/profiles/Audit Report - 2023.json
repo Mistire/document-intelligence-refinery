@@ -5,10 +5,15 @@
   "origin_type": "mixed",
   "layout_complexity": "figure_heavy",
   "language": "en",
-  "domain_hint": "general",
+  "domain_hint": "financial",
   "extraction_cost": "needs_vision_model",
+  "confidence_scores": {
+    "origin_type": 0.85,
+    "layout_complexity": 0.9,
+    "domain_hint": 0.8
+  },
   "avg_char_density": 2.5020902751656785e-6,
   "avg_image_ratio": 0.9896443214232884,
   "total_tables_found": 0,
-  "triage_timestamp": "2026-03-04T17:07:06.646756"
+  "triage_timestamp": "2026-03-05T01:13:37.680565"
 }
