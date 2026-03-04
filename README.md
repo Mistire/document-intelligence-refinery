@@ -2,7 +2,7 @@
 
 Production-grade agentic pipeline for document extraction, semantic chunking, and provenance-tracked querying. Built for the 10Academy Week 3 Challenge.
 
-## 🚀 Overview
+## Overview
 
 The **Document Intelligence Refinery** is designed to solve the "last mile" problem of enterprise intelligence: extracting structured, verifiable data from heterogeneous document formats (digital PDFs, scanned images, complex layouts).
 
@@ -14,7 +14,7 @@ The **Document Intelligence Refinery** is designed to solve the "last mile" prob
 - **PageIndex Builder**: Generates a hierarchical navigation tree with AI-powered section summaries.
 - **Provenance-First Design**: Every chunk and index node maintains spatial metadata and content hashes for 100% traceability.
 
-## 🛠️ Setup
+## Setup
 
 1. **Clone the repository**:
 
@@ -39,14 +39,14 @@ The **Document Intelligence Refinery** is designed to solve the "last mile" prob
    pip install -r requirements.txt
    ```
 
-## 📂 Project Structure
+## Project Structure
 
 - `src/models/`: Pydantic schemas for data integrity.
 - `src/agents/`: Core logic for Triage, Extraction, and Indexing.
 - `scripts/`: Execution scripts for running the pipeline stages.
 - `.refinery/`: Local storage for profiles, extractions, chunks, and indexes.
 
-## 📖 Usage
+## Usage
 
 ### Phase 1 & 2: Extraction
 
@@ -66,7 +66,7 @@ python scripts/run_chunking.py
 python scripts/run_indexing.py
 ```
 
-## 📄 Documentation
+## Documentation
 
 - [INTERIM_REPORT.md](./INTERIM_REPORT.md): Detailed analysis of failure modes and architecture.
 - [DOMAIN_NOTES.md](./DOMAIN_NOTES.md): Phase 0 research and decision matrix.
