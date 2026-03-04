@@ -1,0 +1,36 @@
+[project]
+name = "document-intelligence-refinery"
+version = "0.1.0"
+description = "Agentic pipeline for document extraction, chunking, and provenance-tracked querying"
+requires-python = ">=3.10"
+dependencies = [
+    # Phase 0: Exploration
+    "pdfplumber>=0.11.0",
+    "pymupdf>=1.24.0",
+
+    # Phase 1-2: Extraction
+    "docling>=2.0.0",
+    "Pillow>=10.0.0",
+
+    # Phase 3: Chunking + Indexing
+    "pydantic>=2.0.0",
+
+    # Phase 4: Query + Vector Store
+    "chromadb>=0.5.0",
+    "langchain>=0.3.0",
+    "langgraph>=0.2.0",
+
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "tiktoken>=0.7.0",
+
+    # API access (for VLM / LLM)
+    "openai>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ipython>=8.0.0",
+]
