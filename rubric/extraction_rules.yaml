@@ -1,0 +1,28 @@
+# Extraction Rules & Chunking Constitution
+# Defines thresholds for escalation and semantic grouping rules.
+
+extraction:
+  fast_text:
+    min_char_count: 100
+    max_image_ratio: 0.5
+    strategy: "pdfplumber"
+  layout_aware:
+    min_confidence: 0.8
+    strategy: "docling"
+  vision:
+    model: "openrouter/auto:free"
+    max_tokens: 4096
+
+chunking:
+  max_tokens: 1000
+  rules:
+    - "Table cells must never be split from header rows."
+    - "Figure captions must be stored as metadata of the parent figure."
+    - "Numbered lists must be kept as single units unless exceeding max_tokens."
+    - "Section headers must be preserved as parent metadata for all children."
+    - "Cross-references (e.g., 'see Table 3') must be resolved into relationships."
+
+triage:
+  origin_types: ["native_digital", "scanned_image", "mixed", "form_fillable"]
+  layout_complexities:
+    ["single_column", "multi_column", "table_heavy", "figure_heavy", "mixed"]

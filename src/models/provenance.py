@@ -9,10 +9,8 @@ class BBox(BaseModel):
 
     @field_validator("x", "y", "w", "h")
     @classmethod
-    def must_be_positive(cls, v: float) -> float:
-        if v < 0:
-            raise ValueError("Coordinates and dimensions must be positive")
-        return v
+    def must_be_non_negative(cls, v: float) -> float:
+        return max(0.0, float(v))
 
 class ProvenanceEntry(BaseModel):
     doc_id: str

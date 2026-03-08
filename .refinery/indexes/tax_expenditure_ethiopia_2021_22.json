@@ -1,0 +1,253 @@
+{
+  "doc_id": "tax_expenditure_ethiopia_2021_22",
+  "root_nodes": [
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_ImporttaxexpenditurereportFY201819202021",
+      "title": "Import tax expenditure report: FY 2018/19 - 2020/21",
+      "level": 0,
+      "summary": "The document provides a report on import tax expenditures for fiscal years 2018/19 to 2020/21.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_0"
+      ],
+      "key_entities": [
+        "Import"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_TaxPolicyDirectorateMinistryofFinanceEthiopia",
+      "title": "Tax Policy Directorate, Ministry of Finance, Ethiopia",
+      "level": 0,
+      "summary": "The Tax Policy Directorate of Ethiopia's Ministry of Finance oversees the development and implementation of tax policies.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_1"
+      ],
+      "key_entities": [
+        "Tax Policy Directorate",
+        "Finance",
+        "Ethiopia",
+        "Ministry"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_September2022",
+      "title": "September 2022",
+      "level": 0,
+      "summary": "The document slice indicates a date, September 2022, likely serving as a timestamp or reference point for the content.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_2"
+      ],
+      "key_entities": [
+        "September"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_ImporttaxexpenditurereportFY2018192020212",
+      "title": "Import tax expenditure report: FY 2018/19 - 2020/21 2",
+      "level": 0,
+      "summary": "The document provides a summary of import tax expenditures for fiscal years 2018/19 to 2020/21.",
+      "page_start": 2,
+      "page_end": 2,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_3"
+      ],
+      "key_entities": [
+        "Import"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_Preface",
+      "title": "Preface",
+      "level": 0,
+      "summary": "This report, authored by the IFS TaxDev team in collaboration with Ethiopia's Ministry of Finance Tax Policy Directorate, provides a comprehensive analysis of tax policies in developing countries, with acknowledgments to contributors and data providers.",
+      "page_start": 2,
+      "page_end": 2,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_4",
+        "tax_expenditure_ethiopia_2021_22_text_5",
+        "tax_expenditure_ethiopia_2021_22_text_6",
+        "tax_expenditure_ethiopia_2021_22_text_7"
+      ],
+      "key_entities": [
+        "Daniel Prinz",
+        "David Phillips",
+        "Mulay Weldu",
+        "Edris Seid",
+        "Developing Countries",
+        "Ethiopian Customs Commission",
+        "Ethiopian Ministry",
+        "Centre"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_MinistryofFinanceEthiopia",
+      "title": " Ministry of Finance, Ethiopia",
+      "level": 0,
+      "summary": "The document slice appears to be a repeated copyright notice from the Ministry of Finance, Ethiopia, indicating its ownership and authority over the content.",
+      "page_start": 2,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_8",
+        "tax_expenditure_ethiopia_2021_22_text_11",
+        "tax_expenditure_ethiopia_2021_22_text_19",
+        "tax_expenditure_ethiopia_2021_22_text_24",
+        "tax_expenditure_ethiopia_2021_22_table_25"
+      ],
+      "key_entities": [
+        "Finance",
+        "Ethiopia",
+        "Ministry"
+      ],
+      "data_types_present": [
+        "text",
+        "table"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_ImporttaxexpenditurereportFY2018192020213",
+      "title": "Import tax expenditure report: FY 2018/19 - 2020/21 3",
+      "level": 0,
+      "summary": "The document provides an overview of import tax expenditures for fiscal years 2018/19 to 2020/21.",
+      "page_start": 3,
+      "page_end": 3,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_9"
+      ],
+      "key_entities": [
+        "Import"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_Contents",
+      "title": "Contents",
+      "level": 0,
+      "summary": "The document provides a structured outline of its contents, serving as a navigational guide for the reader.",
+      "page_start": 3,
+      "page_end": 3,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_10"
+      ],
+      "key_entities": [
+        "Contents"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_ImporttaxexpenditurereportFY2018192020214",
+      "title": "Import tax expenditure report: FY 2018/19 - 2020/21 4",
+      "level": 0,
+      "summary": "The document provides a report on import tax expenditures for fiscal years 2018/19 to 2020/21.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_12"
+      ],
+      "key_entities": [
+        "Import"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_Executivesummary",
+      "title": "Executive summary",
+      "level": 0,
+      "summary": "This report analyzes Ethiopia’s import tax expenditures by using shipment-level microdata from the Ethiopian Customs Commission to estimate the value of customs duty, excise duty, VAT, and surtax for fiscal years 2018/19 to 2020/21, aiming to assess whether these tax expenditures align with the government’s development agenda.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_13",
+        "tax_expenditure_ethiopia_2021_22_text_14",
+        "tax_expenditure_ethiopia_2021_22_text_15",
+        "tax_expenditure_ethiopia_2021_22_text_16",
+        "tax_expenditure_ethiopia_2021_22_text_17",
+        "tax_expenditure_ethiopia_2021_22_text_18"
+      ],
+      "key_entities": [
+        "Understanding",
+        "It",
+        "Ethiopia",
+        "Ethiopian Customs Commission",
+        "This",
+        "Tax",
+        "Executive",
+        "To"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "tax_expenditure_ethiopia_2021_22_ImporttaxexpenditurereportFY2018192020215",
+      "title": "Import tax expenditure report: FY 2018/19 - 2020/21 5",
+      "level": 0,
+      "summary": "The document provides a summary of import tax expenditures for fiscal years 2018/19 to 2020/21, highlighting that motor vehicles and animal/vegetable fats accounted for nearly 40% of total tax expenditures, with notably high rates due to surtaxes and import values.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "tax_expenditure_ethiopia_2021_22_text_20",
+        "tax_expenditure_ethiopia_2021_22_text_21",
+        "tax_expenditure_ethiopia_2021_22_text_22",
+        "tax_expenditure_ethiopia_2021_22_text_23"
+      ],
+      "key_entities": [
+        "For",
+        "Together",
+        "At",
+        "Import",
+        "In"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    }
+  ]
+}

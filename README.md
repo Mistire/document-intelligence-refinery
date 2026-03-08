@@ -1,3 +1,5 @@
+![Refinery Banner](image.png)
+
 # Document Intelligence Refinery
 
 Production-grade agentic pipeline for document extraction, semantic chunking, and provenance-tracked querying. Built for the 10Academy Week 3 Challenge.
@@ -48,23 +50,35 @@ The **Document Intelligence Refinery** is designed to solve the "last mile" prob
 
 ## Usage
 
-### Phase 1 & 2: Extraction
+### Unified Pipeline Orchestrator (Recommended)
+
+The fastest way to process the entire corpus with full visibility and timing:
 
 ```bash
-python scripts/run_extraction.py
+python3 run_pipeline.py
 ```
 
-### Phase 3: Semantic Chunking
+This script coordinates Triage, Extraction (A/B/C), Semantic Chunking, and PageIndex building with progress tracking.
 
-```bash
-python scripts/run_chunking.py
+### Query Interface & Audit Mode
+
+Once the pipeline completes, use the agentic interface in Stage 5:
+
+```python
+from src.agents.query_agent import QueryInterfaceAgent
+agent = QueryInterfaceAgent(doc_id="cbe_report")
+answer = agent.run_query("What are the total assets?")
+print(answer)
 ```
 
-### Phase 4: Indexing
+### Manual Stage Execution
 
-```bash
-python scripts/run_indexing.py
-```
+For granular control, run stages individually:
+
+- `python3 scripts/run_triage.py`
+- `python3 scripts/run_extraction.py`
+- `python3 scripts/run_chunking.py`
+- `python3 scripts/run_indexing.py`
 
 ## Documentation
 

@@ -11,6 +11,10 @@ class IndexNode(BaseModel):
     parent_id: Optional[str] = None
     child_nodes: List['IndexNode'] = Field(default_factory=list)
     chunk_ids: List[str] = Field(default_factory=list)
+    
+    # Missing fields from challenge
+    key_entities: List[str] = Field(default_factory=list)
+    data_types_present: List[str] = Field(default_factory=list) # e.g., ["table", "figure"]
 
     @field_validator("page_end")
     @classmethod

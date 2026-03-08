@@ -1,0 +1,385 @@
+{
+  "doc_id": "tax_expenditure_ethiopia_2021_22",
+  "text_blocks": [
+    {
+      "text": "Import tax expenditure report: FY 2018/19 - 2020/21",
+      "bbox": {
+        "x": 87.624,
+        "y": 420.11909802734374,
+        "w": 288.88288,
+        "h": 0.0
+      },
+      "page_number": 1
+    },
+    {
+      "text": "Tax Policy Directorate, Ministry of Finance, Ethiopia",
+      "bbox": {
+        "x": 87.624,
+        "y": 256.67069802734386,
+        "w": 238.72599999999997,
+        "h": 0.0
+      },
+      "page_number": 1
+    },
+    {
+      "text": "September 2022",
+      "bbox": {
+        "x": 87.624,
+        "y": 224.63069802734378,
+        "w": 74.51599999999999,
+        "h": 0.0
+      },
+      "page_number": 1
+    },
+    {
+      "text": "Import tax expenditure report: FY 2018/19 - 2020/21 2",
+      "bbox": {
+        "x": 82.224,
+        "y": 804.5308580273438,
+        "w": 269.93488,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "Preface",
+      "bbox": {
+        "x": 82.224,
+        "y": 754.4948580273438,
+        "w": 108.95888000000001,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "This report has been prepared by the IFS Centre for Tax Analysis in Developing Countries (TaxDev) team (Daniel Prinz, Edris Seid and Ben Waltmann) in collaboration with the Ethiopian Ministry of Finance Tax Policy Directorate team (led by Mulay Weldu).",
+      "bbox": {
+        "x": 82.224,
+        "y": 671.1106980273438,
+        "w": 429.9162399999996,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "The authors would like to thank David Phillips (IFS) for useful comments and feedback. They also thank the staff of the Ministry of Finance Tax Policy Directorate and the staff of the Ethiopian Customs Commission for providing access to data and clarifying certain data issues.",
+      "bbox": {
+        "x": 82.224,
+        "y": 605.1106980273438,
+        "w": 421.876,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "This report has been funded by UK aid from the UK government through a grant to TaxDev.",
+      "bbox": {
+        "x": 82.224,
+        "y": 539.0806980273437,
+        "w": 410.596,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": " Ministry of Finance, Ethiopia",
+      "bbox": {
+        "x": 82.224,
+        "y": 52.251698027343764,
+        "w": 105.01668000000005,
+        "h": 0.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "Import tax expenditure report: FY 2018/19 - 2020/21 3",
+      "bbox": {
+        "x": 82.224,
+        "y": 804.5308580273438,
+        "w": 269.93488,
+        "h": 0.0
+      },
+      "page_number": 3
+    },
+    {
+      "text": "Contents",
+      "bbox": {
+        "x": 82.224,
+        "y": 754.4948580273438,
+        "w": 129.11888,
+        "h": 0.0
+      },
+      "page_number": 3
+    },
+    {
+      "text": " Ministry of Finance, Ethiopia",
+      "bbox": {
+        "x": 82.224,
+        "y": 52.251698027343764,
+        "w": 105.01668000000005,
+        "h": 0.0
+      },
+      "page_number": 3
+    },
+    {
+      "text": "Import tax expenditure report: FY 2018/19 - 2020/21 4",
+      "bbox": {
+        "x": 82.224,
+        "y": 804.5308580273438,
+        "w": 269.93488,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Executive summary",
+      "bbox": {
+        "x": 82.224,
+        "y": 754.4948580273438,
+        "w": 270.97888,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Understanding, estimating and reporting on tax expenditures is an important exercise in public financial management. Tax expenditures - cases in which the tax liability of an individual, a firm or other entity is reduced below the liability under a benchmark tax system use limited public financial resources. Ethiopia, like other countries, incurs significant tax expenditures each year. To understand whether these tax expenditures serve the government's development agenda, tax expenditures must first be measured.",
+      "bbox": {
+        "x": 82.224,
+        "y": 670.9340580273438,
+        "w": 419.836,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "This report uses shipment-level microdata from the Ethiopian Customs Commission to estimate import tax expenditures for fiscal years 2018/19, 2019/20 and 2020/21. It covers the four taxes levied on imports: customs duty, excise duty, VAT and surtax. (It does not cover withholding tax, which is not designed as a final tax.)",
+      "bbox": {
+        "x": 82.224,
+        "y": 553.9040580273437,
+        "w": 429.15423999999996,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Where appropriate, exemptions and rate reductions are considered separately, and estimates are presented for different categories of commodities. In addition to estimating overall tax expenditures and tax expenditures for each tax type, it is useful to understand the source of tax expenditures. Estimates by categories of commodities can help the government assess whether expenditures are in line with development objectives.",
+      "bbox": {
+        "x": 82.224,
+        "y": 470.9840580273438,
+        "w": 410.6552799999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "The report uses the revenue forgone method and does not attempt to incorporate the behavioural or compliance effects of tax expenditures. This implicitly assumes that if all tax expenditures were eliminated, the government would collect the full difference between what is currently collected and what would be collected under the benchmark system. This, however, need not be the case, as imports are potentially responsive to tax rates both on the real and the compliance margin. Furthermore, import tax expenditures likely lead to higher collection of domestic taxes, and especially domestic VAT. Thus, the cost of tax expenditures calculated in this report likely overstates their true fiscal cost.",
+      "bbox": {
+        "x": 82.224,
+        "y": 370.8840580273438,
+        "w": 423.93599999999975,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Import tax expenditures were ETB 120.7 billion in FY 2020/21, which represented around 2.8% of GDP, between ETB 76.4 billion and ETB 78.3 billion (or 2.3% of GDP) in FY 2019/20, and between ETB 68.7 billion and ETB 99.3 billion (2.6% to 3.7% of GDP) in FY 2018/19. Of total import tax expenditures in FY 2020/21, VAT expenditures constituted the largest share at 37% of the total (ETB 44.6 billion), followed by customs duty expenditures at 32% (ETB 38.9 billion), excise tax expenditures at around 16% (ETB 18.8 billion) and surtax expenditures at 15% (ETB 18.4 billion). On average, tax expenditures were worth 21.3% of the",
+      "bbox": {
+        "x": 82.224,
+        "y": 219.89405802734382,
+        "w": 424.49527999999975,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": " Ministry of Finance, Ethiopia",
+      "bbox": {
+        "x": 82.224,
+        "y": 52.251698027343764,
+        "w": 104.996,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Import tax expenditure report: FY 2018/19 - 2020/21 5",
+      "bbox": {
+        "x": 82.224,
+        "y": 804.5308580273438,
+        "w": 269.93488,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "import value of affected goods in FY 2020/21, 16% in FY 2019/20 and around 20% in FY 2018/19.",
+      "bbox": {
+        "x": 82.224,
+        "y": 756.6706980273437,
+        "w": 400.37871999999993,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "In FY 2020/21, import tax expenditures were especially large on motor vehicles and on animal and vegetable fats. Together, these two categories of imports made up nearly 40% of total tax expenditures. At around 50%, average tax expenditures in both of these categories are also especially large relative to the value of imports. For vehicles, these high expenditures primarily arise from much higher statutory surtax rates since FY 2020/21 that have not been consistently applied. For animal and vegetable fats (largely palm oil), high FY 2020/21 tax expenditures are the result of ad hoc exemptions for the importation of cooking oil to stabilise local prices, combined with a high value of imports in this category.",
+      "bbox": {
+        "x": 82.224,
+        "y": 707.4140580273438,
+        "w": 419.31023999999974,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Tax exemptions for capital and investment goods and 'second schedule' preferential customs and surtax rates respectively only account for 2.3% and 1.0% of tax expenditures. This is primarily because only a very small share of imports by value are eligible for them: 0.5% for capital goods exemptions and 1.0% for second schedule rates. The share of tax expenditures due to second schedule rates has fallen substantially in recent years as the share of eligible goods has been reduced. However, between the 2019/20 and 2020/21 fiscal years, the fall in second schedule expenditures was far outweighed by the growth in the value of other ad hoc expenditures.",
+      "bbox": {
+        "x": 82.224,
+        "y": 556.4240580273438,
+        "w": 429.06959999999964,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": " Ministry of Finance, Ethiopia",
+      "bbox": {
+        "x": 82.224,
+        "y": 52.251698027343764,
+        "w": 104.996,
+        "h": 0.0
+      },
+      "page_number": 5
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "0",
+        "1",
+        "2"
+      ],
+      "rows": [
+        [
+          "Executive summary...................................................................................................................... 4",
+          "Executive summary...................................................................................................................... 4",
+          "Executive summary...................................................................................................................... 4"
+        ],
+        [
+          "1.",
+          "Introduction .......................................................................................................................... 6",
+          "Introduction .......................................................................................................................... 6"
+        ],
+        [
+          "2.",
+          "Policy rationale for and issues with tax expenditures ....................................................... 7",
+          "Policy rationale for and issues with tax expenditures ....................................................... 7"
+        ],
+        [
+          "3.",
+          "Definitions and data ............................................................................................................. 9",
+          "Definitions and data ............................................................................................................. 9"
+        ],
+        [
+          "",
+          "3.1",
+          "Defining the benchmark tax system............................................................................. 9"
+        ],
+        [
+          "",
+          "3.2",
+          "Estimating tax expenditures ....................................................................................... 13"
+        ],
+        [
+          "",
+          "3.3",
+          "Data ............................................................................................................................ 15"
+        ],
+        [
+          "4.",
+          "Tax expenditure estimates ................................................................................................. 16",
+          "Tax expenditure estimates ................................................................................................. 16"
+        ],
+        [
+          "",
+          "4.1",
+          "Overall tax expenditures............................................................................................. 16"
+        ],
+        [
+          "",
+          "4.2",
+          "Customs duty.............................................................................................................. 22"
+        ],
+        [
+          "",
+          "4.3",
+          "Excise duty................................................................................................................. 27"
+        ],
+        [
+          "",
+          "4.4",
+          "VAT............................................................................................................................ 33"
+        ],
+        [
+          "",
+          "4.5",
+          "Surtax ......................................................................................................................... 36"
+        ],
+        [
+          "5.",
+          "Conclusions and recommendations................................................................................... 41",
+          "Conclusions and recommendations................................................................................... 41"
+        ],
+        [
+          "Appendices.................................................................................................................................. 43",
+          "Appendices.................................................................................................................................. 43",
+          "Appendices.................................................................................................................................. 43"
+        ],
+        [
+          "",
+          "A.",
+          "Negative tax expenditures .......................................................................................... 43"
+        ],
+        [
+          "",
+          "B.",
+          "Details on the calculation of indirect effects of tax expenditures............................... 44"
+        ],
+        [
+          "",
+          "C.",
+          "Alternative measures of tax expenditures .................................................................. 45"
+        ],
+        [
+          "",
+          "D.",
+          "Duplicate records in customs microdata .................................................................... 46"
+        ],
+        [
+          "",
+          "E.",
+          "Commodity categorisation based on two-digit HS code............................................ 48"
+        ],
+        [
+          "",
+          "F.",
+          "Supplementary tables ................................................................................................. 49"
+        ],
+        [
+          "References................................................................................................................................... 59",
+          "References................................................................................................................................... 59",
+          "References................................................................................................................................... 59"
+        ]
+      ],
+      "bbox": null,
+      "page_number": 3
+    }
+  ],
+  "figures": [],
+  "metadata": {
+    "docling_conversion_time": 0,
+    "refinery_version": "v1.1-robust-tables",
+    "final_strategy": "B",
+    "total_cost_usd": 0.01
+  }
+}

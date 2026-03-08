@@ -6,53 +6,137 @@ from src.models.chunk import LDU
 from src.models.extracted_document import ExtractedDocument
 from src.models.provenance import BBox
 
+class ChunkValidator:
+    @staticmethod
+    def validate_ldu(ldu: LDU) -> bool:
+        """Verify semantic rules are respected."""
+        # 1. Table integrity check
+        if ldu.chunk_type == "table":
+            if "|" not in ldu.content:
+                return False
+        # 2. List integrity
+        if ldu.chunk_type == "list":
+            if "\n" not in ldu.content and not re.match(r'^(\d+\.|[A-Za-z]\.|•|\-)\s+', ldu.content):
+                return False
+        # 3. Provenance check
+        if not ldu.page_refs:
+            return False
+            
+        return True
+
 class SemanticChunker:
     def __init__(self, max_tokens: int = 1000):
         self.max_tokens = max_tokens
+        self.validator = ChunkValidator()
 
     def chunk_document(self, doc: ExtractedDocument) -> List[LDU]:
         chunks = []
+        current_headers = []
         
-        # 1. Process Text Blocks
-        # For simplicity in this refinement, we group text blocks into logical units.
-        # Here we treat each distinct block from the extraction as a candidate chunk.
-        for block in doc.text_blocks:
+        # 1. Process Text Blocks with Header Detection and List Grouping
+        i = 0
+        while i < len(doc.text_blocks):
+            block = doc.text_blocks[i]
             content = block.text.strip()
+            
             if not content:
+                i += 1
                 continue
+
+            # Header Detection (Heuristic: Short lines, no ending punctuation, or explicit common header patterns)
+            # We exclude lines that look like list items from being headers.
+            is_list_item = re.match(r'^(\d+\.|[A-Za-z]\.|•|\-)\s+', content)
+            
+            if len(content) < 100 and not content.endswith(('.', '?', '!')) and not is_list_item:
+                # Heuristic: if it's a short line, treat as potential header
+                current_headers = [content] 
+
+            # List Grouping
+            if is_list_item:
+                list_items = [content]
+                page_refs = [block.page_number]
+                bbox = block.bbox
                 
-            chunk_id = f"{doc.doc_id}_text_{len(chunks)}"
-            content_hash = hashlib.sha256(content.encode()).hexdigest()
+                # Look ahead for more list items
+                while i + 1 < len(doc.text_blocks):
+                    next_block = doc.text_blocks[i + 1]
+                    next_content = next_block.text.strip()
+                    if re.match(r'^(\d+\.|[A-Za-z]\.|•|\-)\s+', next_content):
+                        list_items.append(next_content)
+                        if next_block.page_number not in page_refs:
+                            page_refs.append(next_block.page_number)
+                        i += 1
+                    else:
+                        break
+                
+                full_content = "\n".join(list_items)
+                chunk_id = f"{doc.doc_id}_list_{len(chunks)}"
+                chunks.append(LDU(
+                    chunk_id=chunk_id,
+                    doc_id=doc.doc_id,
+                    content=full_content,
+                    content_hash=hashlib.sha256(full_content.encode()).hexdigest(),
+                    page_refs=page_refs,
+                    chunk_type="list",
+                    bbox=bbox,
+                    parent_headers=list(current_headers)
+                ))
+            else:
+                # Regular Text Block
+                chunk_id = f"{doc.doc_id}_text_{len(chunks)}"
+                ldu = LDU(
+                    chunk_id=chunk_id,
+                    doc_id=doc.doc_id,
+                    content=content,
+                    content_hash=hashlib.sha256(content.encode()).hexdigest(),
+                    page_refs=[block.page_number],
+                    chunk_type="text",
+                    bbox=block.bbox,
+                    parent_headers=list(current_headers)
+                )
+                # 4. Resolve Cross-refs
+                refs = re.findall(r'(?:see|refer to|in)\s+(Table\s+\d+|Section\s+[\d\.]+|Figure\s+\d+)', content, re.I)
+                if refs:
+                    ldu.source_metadata["cross_refs"] = list(set(refs))
+                chunks.append(ldu)
+            i += 1
             
-            chunks.append(LDU(
-                chunk_id=chunk_id,
-                doc_id=doc.doc_id,
-                content=content,
-                content_hash=content_hash,
-                page_refs=[block.page_number],
-                chunk_type="text",
-                bbox=block.bbox
-            ))
-            
-        # 2. Process Tables
+        # 2. Process Tables (Already Preserved as Units)
         for table in doc.tables:
-            # Reconstruct a markdown-like representation for table content
             table_content = " | ".join(table.headers) + "\n"
-            table_content += "-" * len(table_content) + "\n"
+            table_content += "-" * 20 + "\n"
             for row in table.rows:
                 table_content += " | ".join([str(c) for c in row]) + "\n"
             
             chunk_id = f"{doc.doc_id}_table_{len(chunks)}"
-            content_hash = hashlib.sha256(table_content.encode()).hexdigest()
-            
             chunks.append(LDU(
                 chunk_id=chunk_id,
                 doc_id=doc.doc_id,
                 content=table_content,
-                content_hash=content_hash,
+                content_hash=hashlib.sha256(table_content.encode()).hexdigest(),
                 page_refs=[table.page_number],
                 chunk_type="table",
-                bbox=table.bbox
+                bbox=table.bbox,
+                parent_headers=list(current_headers)
+            ))
+
+        # 3. Process Figures and Captions
+        for figure in doc.figures:
+            content = f"[FIGURE] {figure.caption or 'No caption available'}"
+            chunk_id = f"{doc.doc_id}_figure_{len(chunks)}"
+            chunks.append(LDU(
+                chunk_id=chunk_id,
+                doc_id=doc.doc_id,
+                content=content,
+                content_hash=hashlib.sha256(content.encode()).hexdigest(),
+                page_refs=[figure.page_number],
+                chunk_type="figure",
+                bbox=figure.bbox,
+                parent_headers=list(current_headers),
+                source_metadata={"caption": figure.caption}
             ))
             
-        return chunks
+        # Validate and return
+        valid_chunks = [c for c in chunks if self.validator.validate_ldu(c)]
+        print(f"✅ Chunking complete: {len(valid_chunks)} valid LDUs generated.")
+        return valid_chunks

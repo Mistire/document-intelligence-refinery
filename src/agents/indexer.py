@@ -1,3 +1,4 @@
+import re
 import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -15,6 +16,7 @@ class PageIndexBuilder:
             openai_api_key=os.getenv("OPENROUTER_API_KEY"),
             openai_api_base=os.getenv("OPENROUTER_URL"),
             model=os.getenv("MODEL_NAME"),
+            max_tokens=4096,
             default_headers={
                 "HTTP-Referer": "https://localhost:3000",
                 "X-Title": "Document Intelligence Refinery"
@@ -30,37 +32,74 @@ class PageIndexBuilder:
     def build_index(self, doc_id: str, chunks: List[LDU]) -> PageIndex:
         print(f"🗺️ Building PageIndex for {doc_id} with recursive linking...")
         
-        # 1. Group chunks by page for simple hierarchical discovery
-        # (In a more complex version, we'd use header hierarchy if available)
-        page_groups: Dict[int, List[LDU]] = {}
-        for chunk in chunks:
-            p = chunk.page_refs[0] if chunk.page_refs else 1
-            if p not in page_groups:
-                page_groups[p] = []
-            page_groups[p].append(chunk)
-            
-        # 2. Build root nodes (one per page for this prototype)
+        sections: Dict[str, IndexNode] = {}
         root_nodes = []
-        sorted_pages = sorted(page_groups.keys())
         
-        for i, page_num in enumerate(sorted_pages):
-            group_chunks = page_groups[page_num]
+        # 1. Group chunks into hierarchical sections
+        for chunk in chunks:
+            # Determine the section path (default to "Overview" if no headers)
+            path = chunk.parent_headers if chunk.parent_headers else ["Overview"]
             
-            # Use small slice to save tokens
-            combined_text = "\n".join([c.content[:400] for c in group_chunks[:2]])
-            summary = self._generate_summary(combined_text)
+            # For each level in the path, ensure a node exists
+            parent_id = None
+            for level, title in enumerate(path):
+                # Unique ID for the section at this level
+                node_id = f"{doc_id}_{'_'.join([re.sub(r'\W+', '', t) for t in path[:level+1]])}"
+                
+                if node_id not in sections:
+                    node = IndexNode(
+                        id=node_id,
+                        title=title,
+                        level=level,
+                        summary="Generating...", 
+                        page_start=chunk.page_refs[0],
+                        page_end=chunk.page_refs[-1],
+                        parent_id=parent_id,
+                        chunk_ids=[],
+                        key_entities=[],
+                        data_types_present=[]
+                    )
+                    sections[node_id] = node
+                    if parent_id:
+                        # Append reference to the existing section object
+                        sections[parent_id].child_nodes.append(node)
+                    else:
+                        root_nodes.append(node)
+                
+                # Update node metadata
+                node = sections[node_id]
+                node.page_start = min(node.page_start, chunk.page_refs[0])
+                node.page_end = max(node.page_end, chunk.page_refs[-1])
+                
+                # Check if chunk belongs exactly to this leaf or we just pass through
+                if level == len(path) - 1:
+                    if chunk.chunk_id not in node.chunk_ids:
+                        node.chunk_ids.append(chunk.chunk_id)
+                
+                if chunk.chunk_type not in node.data_types_present:
+                    node.data_types_present.append(chunk.chunk_type)
+                
+                parent_id = node_id
             
-            node = IndexNode(
-                id=f"{doc_id}_page_{page_num}",
-                title=f"Page {page_num}",
-                level=0,
-                summary=summary,
-                page_start=page_num,
-                page_end=page_num,
-                chunk_ids=[c.chunk_id for c in group_chunks]
-            )
-            root_nodes.append(node)
+        # 2. Post-process: Generate summaries and extract entities
+        chunk_map = {c.chunk_id: c for c in chunks}
+        for node in sections.values():
+            # Combine text from direct chunks and potentially child chunks for context
+            all_chunk_ids = list(node.chunk_ids)
+            # (In a more complex implementation, we'd recursively collect child chunk IDs)
             
+            if all_chunk_ids:
+                combined_text = ""
+                for cid in all_chunk_ids[:3]: # Sample for summary
+                    combined_text += chunk_map[cid].content[:500] + "\n"
+                
+                node.summary = self._generate_summary(combined_text)
+                # Heuristic Entity Extraction (Capitalized words)
+                entities = re.findall(r'\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)*\b', combined_text)
+                node.key_entities = list(set(entities))[:8]
+            else:
+                node.summary = "Structural section containing sub-chapters."
+        
         return PageIndex(doc_id=doc_id, root_nodes=root_nodes)
 
     def _generate_summary(self, text: str) -> str:

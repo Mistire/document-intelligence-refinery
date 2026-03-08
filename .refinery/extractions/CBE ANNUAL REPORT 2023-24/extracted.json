@@ -1,0 +1,764 @@
+{
+  "doc_id": "CBE ANNUAL REPORT 2023-24",
+  "text_blocks": [
+    {
+      "text": "PROFILE",
+      "bbox": {
+        "x": 52.4409,
+        "y": 787.6698146484375,
+        "w": 68.33400000000002,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Has been serving Ethiopia since 1942.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 762.2185146484375,
+        "w": 201.65879999999996,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Pioneered ATM services in Ethiopia.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 744.9839146484375,
+        "w": 190.13880000000003,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Introduced Western Union Money Transfer Services to Ethiopia.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 727.7493146484375,
+        "w": 327.5855999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Is the first Ethiopian bank to offer interest-free banking services.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 710.5146146484375,
+        "w": 331.0763999999998,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Has been playing a catalytic role in the socio-economic development of the nation.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 693.2800146484375,
+        "w": 426.8592,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Had 1,942 branches across the country as of 30 June 2024.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 676.0453146484375,
+        "w": 303.46680000000003,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Has strong correspondent relationships with about 38 renowned foreign banks and SWIFT bilateral key arrangements with over 750 banks.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 658.8107146484375,
+        "w": 464.7083999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Achieved a strong asset position of Birr 1.4 trillion as of 30 June 2024.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 627.1761146484375,
+        "w": 356.6136,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Combines a wide capital base with above 48 thousand permanent and 33 thousand temporary employees.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 609.9414146484376,
+        "w": 433.0283999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â Is headquartered in a modern skyscraper (4B+G+48) that is the tallest in East Africa.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 578.3067146484375,
+        "w": 430.0151999999997,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "VISION",
+      "bbox": {
+        "x": 52.4409,
+        "y": 552.7155146484375,
+        "w": 59.682000000000016,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "To become a world-class commercial bank financially driving Ethiopia's future.",
+      "bbox": {
+        "x": 52.4409,
+        "y": 526.3042146484374,
+        "w": 389.6699999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "MISSION",
+      "bbox": {
+        "x": 52.4409,
+        "y": 501.6730146484375,
+        "w": 72.19800000000001,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "We are committed to realizing stakeholders' values through enhanced financial intermediation globally, deploying highly motivated and skilled employees.",
+      "bbox": {
+        "x": 52.4409,
+        "y": 475.26171464843753,
+        "w": 472.10999999999996,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "MOTTO",
+      "bbox": {
+        "x": 52.4409,
+        "y": 436.2305146484375,
+        "w": 56.168000000000006,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "The Bank You Can Always Rely on!",
+      "bbox": {
+        "x": 52.4409,
+        "y": 409.81921464843754,
+        "w": 167.89079999999993,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "VALUES",
+      "bbox": {
+        "x": 52.4409,
+        "y": 376.6461146484375,
+        "w": 61.348,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "i) Integrity",
+      "bbox": {
+        "x": 52.4409,
+        "y": 350.23491464843755,
+        "w": 56.18279999999997,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are committed to the highest ideals of honor and integrity.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 329.7083146484375,
+        "w": 326.7684,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are committed to acting in an honest and trustworthy manner.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 312.47361464843743,
+        "w": 343.9403999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are committed to firmly adhering to ethical principles and standards.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 295.23901464843743,
+        "w": 374.36039999999974,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "ii) Service Excellence",
+      "bbox": {
+        "x": 52.4409,
+        "y": 272.79231464843747,
+        "w": 109.70280000000008,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are committed to maintaining the highest operating standards.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 252.26571464843755,
+        "w": 347.1443999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are committed to being a preferred brand in service quality in the minds of customers and the general public.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 235.03111464843755,
+        "w": 483.1151999999997,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We strive to build long lasting relationships with our customers.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 203.39641464843749,
+        "w": 330.5243999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "iii) Professionalism",
+      "bbox": {
+        "x": 52.4409,
+        "y": 180.9498146484375,
+        "w": 100.7268,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We take ownership and personal responsibility for all what we do.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 160.42321464843758,
+        "w": 340.3403999999999,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are professionals in conduct and treat customers with the utmost respect.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 143.18861464843758,
+        "w": 398.7443999999997,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We are responsive to the needs and interests of our customers.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 125.95391464843749,
+        "w": 325.50960000000003,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We maintain the confidentiality and privacy of all customers.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 108.71931464843749,
+        "w": 314.9123999999998,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We continually develop ourselves to maintain leading-edge capabilities.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 91.48461464843751,
+        "w": 372.0671999999998,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "Â We apply our knowledge and competence to our competitive advantage.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 74.25001464843751,
+        "w": 378.94439999999975,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "ii",
+      "bbox": {
+        "x": 36.0534,
+        "y": 31.686414648437562,
+        "w": 5.616,
+        "h": 0.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "VALUES - (Continued)",
+      "bbox": {
+        "x": 52.4409,
+        "y": 787.6698146484375,
+        "w": 172.75999999999996,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Iv) Empowerment",
+      "bbox": {
+        "x": 52.4409,
+        "y": 761.1352146484375,
+        "w": 94.57080000000005,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We distinguish employees as valuable organizational resources.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 738.3309146484376,
+        "w": 329.82959999999997,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We promote delegation of duties and responsibilities.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 717.4012146484375,
+        "w": 280.6295999999999,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We maintain an atmosphere that inspires confidence and take ownership.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 696.4715146484375,
+        "w": 380.21639999999985,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We take responsibility, support each other and serve customers in a courteous and respectful manner.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 675.5418146484375,
+        "w": 479.6459999999997,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We recognize our employees for their best achievements.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 637.9344146484375,
+        "w": 299.0495999999998,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "V) Innovative Organization",
+      "bbox": {
+        "x": 52.441,
+        "y": 611.7927146484375,
+        "w": 143.96280000000004,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We go above and beyond to find solutions to stakeholder problems leveraging technology where possible.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 588.9884146484375,
+        "w": 467.45519999999993,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We anticipate and respond to internal and external changes through constant improvement and adjustment.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 551.3810146484375,
+        "w": 474.8712,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We establish a culture that nurtures individual and group learning.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 513.7736146484375,
+        "w": 344.2524,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We retain and disseminate tacit knowledge across the Bank.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 492.84391464843753,
+        "w": 311.75759999999997,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Vi) Teamwork",
+      "bbox": {
+        "x": 52.441,
+        "y": 466.7022146484375,
+        "w": 71.56800000000003,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We respect one another and cooperate in our work.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 443.8979146484375,
+        "w": 270.24959999999993,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We recognize the importance of teamwork for our success.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 422.96821464843754,
+        "w": 305.34959999999995,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We collaborate and support one another to ensure process integration and minimize external business challenges.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 402.0385146484375,
+        "w": 481.33919999999983,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Vii) Respect for Diversity",
+      "bbox": {
+        "x": 52.441,
+        "y": 359.21911464843754,
+        "w": 130.59360000000007,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We are responsive to cultural, ethical, religious or other values of employees and customers.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 336.4148146484375,
+        "w": 469.3271999999999,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We value diversity of ideas and viewpoints of our employees.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 315.4851146484375,
+        "w": 316.72439999999995,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We foster an environment of inclusiveness, where all people, regardless of their sex, age, belief, etc. can exercise their maximum potential.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 294.5554146484376,
+        "w": 453.9179999999997,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We are committed to address the needs of our customers, regardless of their sex, age, education etc.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 256.9480146484375,
+        "w": 440.8391999999999,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We are committed to listening to one another and respond appropriately.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 219.34051464843753,
+        "w": 379.53239999999977,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Viii) Corporate Citizenship",
+      "bbox": {
+        "x": 52.441,
+        "y": 193.1989146484375,
+        "w": 139.3548,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We value the importance of our role in national development endeavours and stand up for this commitment.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 170.39461464843748,
+        "w": 467.2499999999997,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We abide by the laws of Ethiopia and other countries in which we do business.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 132.78711464843752,
+        "w": 402.6431999999999,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We care about the society's welfare and the environment.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 111.8574146484375,
+        "w": 299.4096,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "Â We believe that the sustainability of our business depends on our ability to maintain and build public confidence.",
+      "bbox": {
+        "x": 60.9449,
+        "y": 90.92781464843756,
+        "w": 456.8579999999999,
+        "h": 0.0
+      },
+      "page_number": 5
+    },
+    {
+      "text": "iii",
+      "bbox": {
+        "x": 550.9497,
+        "y": 31.686414648437562,
+        "w": 8.423999999999978,
+        "h": 0.0
+      },
+      "page_number": 5
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "0",
+        "1"
+      ],
+      "rows": [
+        [
+          "CONTENTS",
+          ""
+        ],
+        [
+          "PROFILE",
+          "ii"
+        ],
+        [
+          "VISION",
+          "ii"
+        ],
+        [
+          "MISSION",
+          "ii"
+        ],
+        [
+          "MOTTO",
+          "ii"
+        ],
+        [
+          "VALUES",
+          "ii-iii"
+        ],
+        [
+          "PERFORMANCE HIGHLIGHTS",
+          "iv-v"
+        ],
+        [
+          "BOARD OF DIRECTORS",
+          "vi-vii"
+        ],
+        [
+          "CBENOORSHARI'AHADVISORYCOMMITTEE",
+          "viii"
+        ],
+        [
+          "EXECUTIVE MANAGEMENT",
+          "ix-xi"
+        ],
+        [
+          "PRESIDENT'S MESSAGE",
+          "XII"
+        ],
+        [
+          "SHARIÁ ADVISORY COMMITTEE (SAC) STATEMENT FORTHE FISCALYEAR ENDED JUNE 30 2022",
+          "1-2"
+        ],
+        [
+          "1. HIGHLIGHTSOFGLOBALANDDOMESTICECONOMIES",
+          "3"
+        ],
+        [
+          "1.1 The Global Economy",
+          "3"
+        ],
+        [
+          "1.2 The Ethiopian Economy",
+          "3"
+        ],
+        [
+          "2 HIGHLIGHTS OF CBE'S FINANCIAL STATEMENTS",
+          "5"
+        ],
+        [
+          "2.1 Income Statement",
+          "5"
+        ],
+        [
+          "2.1.1 Income",
+          "5"
+        ],
+        [
+          "2.1.2 Expense",
+          "6"
+        ],
+        [
+          "2.1.3 Profit",
+          "6"
+        ],
+        [
+          "2.2 Balance Sheet",
+          "7"
+        ],
+        [
+          "2.2.1 Assets",
+          "7"
+        ],
+        [
+          "2.2.2 Liabilities",
+          "8"
+        ],
+        [
+          "2.2.3 Capital and Reserves",
+          "8"
+        ],
+        [
+          "3 HIGHLIGHTS OF NON-FINANCIAL DEVELOPMENTS",
+          "8"
+        ],
+        [
+          "3.1 Customer Base Expansion and Use of Digital Channels",
+          "8"
+        ],
+        [
+          "3.2 Accessibility",
+          "8"
+        ],
+        [
+          "3.3 Human Resource Development",
+          "8"
+        ],
+        [
+          "ANNEX: 2022/23 AUDITOR'S REPORT ANDFINANCIAL STATEMENTS",
+          "10-144"
+        ],
+        [
+          "CONTENTS OFTHE ANNEX",
+          "145"
+        ]
+      ],
+      "bbox": null,
+      "page_number": 3
+    }
+  ],
+  "figures": [],
+  "metadata": {
+    "docling_conversion_time": 0,
+    "refinery_version": "v1.1-robust-tables",
+    "final_strategy": "B",
+    "total_cost_usd": 0.01
+  }
+}

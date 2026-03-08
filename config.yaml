@@ -13,6 +13,7 @@ extraction:
   confidence_threshold_a: 0.85
   confidence_threshold_b: 0.70
   vlm_max_budget_per_doc: 2.00 # USD
+  max_pages_per_doc: 5 # Limit to speed up processing
 
 # Chunking Parameters
 chunking:

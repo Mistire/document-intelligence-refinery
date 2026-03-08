@@ -1,0 +1,209 @@
+{
+  "doc_id": "fta_performance_survey_final_report_2022",
+  "root_nodes": [
+    {
+      "id": "fta_performance_survey_final_report_2022_AssessmentofFinancialTransparencyandAccountabilityFTAImplementationinEthiopia",
+      "title": "Assessment of Financial Transparency and Accountability (FTA) Implementation in Ethiopia",
+      "level": 0,
+      "summary": "The document evaluates the implementation of Financial Transparency and Accountability (FTA) in Ethiopia, focusing on its effectiveness, challenges, and structural impact.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_0"
+      ],
+      "key_entities": [
+        "Financial Transparency",
+        "Ethiopia",
+        "Implementation",
+        "Accountability",
+        "Assessment"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_FinalReport",
+      "title": "Final Report",
+      "level": 0,
+      "summary": "The document is a comprehensive concluding summary of a completed project or study, outlining its key findings, outcomes, and recommendations.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_1"
+      ],
+      "key_entities": [
+        "Final Report"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_RFPNoETNCBMOFECCOPCU129904CSQCBS",
+      "title": "RFP No: ET-NCB-MOFEC-COPCU-129904-CS-QCBS",
+      "level": 0,
+      "summary": "The document slice identifies a specific Request for Proposal (RFP) with the reference number ET-NCB-MOFEC-COPCU-129904-CS-QCBS, serving as a unique identifier for procurement or contracting purposes.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_2"
+      ],
+      "key_entities": [
+        "No"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_SUBMITTEDTO",
+      "title": "SUBMITTED TO:",
+      "level": 0,
+      "summary": "The document slice appears to be the beginning of a formal submission, likely indicating the recipient or entity to whom the document is being addressed. Its structural purpose is to establish the intended audience or recipient of the content that follows.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_3"
+      ],
+      "key_entities": [],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_MinistryofFinanceMoFAddisAbabaEthiopia",
+      "title": "Ministry of Finance (MoF) Addis Ababa, Ethiopia",
+      "level": 0,
+      "summary": "The Ministry of Finance in Addis Ababa, Ethiopia, serves as the central government body responsible for managing the nation's financial policies and resources.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_4"
+      ],
+      "key_entities": [
+        "Ethiopia",
+        "Ministry",
+        "Finance",
+        "Addis Ababa"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_SUBMITTEDBY",
+      "title": "SUBMITTED BY:",
+      "level": 0,
+      "summary": "The document slice outlines the submission process, identifying the contributor or entity responsible for providing the content.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_5"
+      ],
+      "key_entities": [],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_TAKInnovativeResearchandDevelopmentInstitutePLCTAKIRDIAddisAbabaEthiopia",
+      "title": "TAK-Innovative Research and Development Institute PLC (TAK-IRDI) Addis Ababa, Ethiopia",
+      "level": 0,
+      "summary": "TAK-Innovative Research and Development Institute PLC (TAK-IRDI) is a research and development organization based in Addis Ababa, Ethiopia.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_6"
+      ],
+      "key_entities": [
+        "Development Institute",
+        "Ethiopia",
+        "Innovative Research",
+        "Addis Ababa"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_August2022",
+      "title": "August 2022",
+      "level": 0,
+      "summary": "The document slice indicates the date \"August 2022,\" likely serving as a timestamp or reference point for the content.",
+      "page_start": 1,
+      "page_end": 1,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_7"
+      ],
+      "key_entities": [
+        "August"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_Contents",
+      "title": "Contents",
+      "level": 0,
+      "summary": "The document slice provides a structured overview of the contents, likely serving as a table of contents or outline for the main document.",
+      "page_start": 2,
+      "page_end": 2,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_8"
+      ],
+      "key_entities": [
+        "Contents"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "fta_performance_survey_final_report_2022_ListofFigures",
+      "title": "List of Figures",
+      "level": 0,
+      "summary": "The document provides a list of figures detailing citizens' understanding of the FTA initiative, changes in that understanding, local government budget awareness, and respondents' knowledge of the budget.",
+      "page_start": 4,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "fta_performance_survey_final_report_2022_text_9",
+        "fta_performance_survey_final_report_2022_table_13"
+      ],
+      "key_entities": [
+        "Figures",
+        "Citizens",
+        "Figure",
+        "Changes",
+        "Citizen",
+        "Proportion",
+        "List"
+      ],
+      "data_types_present": [
+        "text",
+        "table"
+      ]
+    }
+  ]
+}

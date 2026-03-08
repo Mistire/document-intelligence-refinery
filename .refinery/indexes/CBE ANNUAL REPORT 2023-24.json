@@ -1,0 +1,372 @@
+{
+  "doc_id": "CBE ANNUAL REPORT 2023-24",
+  "root_nodes": [
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_PROFILE",
+      "title": "PROFILE",
+      "level": 0,
+      "summary": "The document outlines the historical significance and pioneering role of a financial institution in Ethiopia since 1942, highlighting its introduction of ATM services.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_0",
+        "CBE ANNUAL REPORT 2023-24_text_1",
+        "CBE ANNUAL REPORT 2023-24_text_2",
+        "CBE ANNUAL REPORT 2023-24_text_3",
+        "CBE ANNUAL REPORT 2023-24_text_4",
+        "CBE ANNUAL REPORT 2023-24_text_5",
+        "CBE ANNUAL REPORT 2023-24_text_6",
+        "CBE ANNUAL REPORT 2023-24_text_7",
+        "CBE ANNUAL REPORT 2023-24_text_8",
+        "CBE ANNUAL REPORT 2023-24_text_9",
+        "CBE ANNUAL REPORT 2023-24_text_10"
+      ],
+      "key_entities": [
+        "Has",
+        "Pioneered",
+        "Ethiopia"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_VISION",
+      "title": "VISION",
+      "level": 0,
+      "summary": "The document outlines the vision of becoming a world-class commercial bank that financially drives Ethiopia's future.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_11",
+        "CBE ANNUAL REPORT 2023-24_text_12"
+      ],
+      "key_entities": [
+        "To",
+        "Ethiopia"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_MISSION",
+      "title": "MISSION",
+      "level": 0,
+      "summary": "The document outlines the organization's mission to create value for stakeholders through improved global financial intermediation, driven by a dedicated and skilled workforce.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_13",
+        "CBE ANNUAL REPORT 2023-24_text_14"
+      ],
+      "key_entities": [
+        "We"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_MOTTO",
+      "title": "MOTTO",
+      "level": 0,
+      "summary": "The slice introduces a motto for a bank, emphasizing reliability and trustworthiness as its core message.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_15",
+        "CBE ANNUAL REPORT 2023-24_text_16"
+      ],
+      "key_entities": [
+        "The Bank You Can Always Rely"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_VALUES",
+      "title": "VALUES",
+      "level": 0,
+      "summary": "The document slice appears to be a placeholder or incomplete, as it only contains the word \"VALUES\" without any additional context or content. Without further information, it is not possible to provide a meaningful summary or identify the main topics or structural purpose.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_17"
+      ],
+      "key_entities": [],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_iIntegrity",
+      "title": "i) Integrity",
+      "level": 0,
+      "summary": "The document slice outlines core principles of integrity, emphasizing a commitment to honor, honesty, and trustworthy behavior.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_18",
+        "CBE ANNUAL REPORT 2023-24_text_19",
+        "CBE ANNUAL REPORT 2023-24_text_20",
+        "CBE ANNUAL REPORT 2023-24_text_21"
+      ],
+      "key_entities": [
+        "We",
+        "Integrity"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_iiServiceExcellence",
+      "title": "ii) Service Excellence",
+      "level": 0,
+      "summary": "The document emphasizes a commitment to maintaining the highest operating standards and being recognized as a preferred brand for service quality by customers and the general public.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_22",
+        "CBE ANNUAL REPORT 2023-24_text_23",
+        "CBE ANNUAL REPORT 2023-24_text_24",
+        "CBE ANNUAL REPORT 2023-24_text_25"
+      ],
+      "key_entities": [
+        "We",
+        "Service Excellence"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_iiiProfessionalism",
+      "title": "iii) Professionalism",
+      "level": 0,
+      "summary": "The document slice emphasizes professionalism by highlighting ownership, personal responsibility, and respectful conduct towards customers.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_26",
+        "CBE ANNUAL REPORT 2023-24_text_27",
+        "CBE ANNUAL REPORT 2023-24_text_28",
+        "CBE ANNUAL REPORT 2023-24_text_29",
+        "CBE ANNUAL REPORT 2023-24_text_30",
+        "CBE ANNUAL REPORT 2023-24_text_31",
+        "CBE ANNUAL REPORT 2023-24_text_32"
+      ],
+      "key_entities": [
+        "We",
+        "Professionalism"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_ii",
+      "title": "ii",
+      "level": 0,
+      "summary": "The document appears to be a minimal or placeholder entry, likely serving as a structural or formatting element rather than containing substantive content.",
+      "page_start": 4,
+      "page_end": 4,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_33"
+      ],
+      "key_entities": [],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_VALUESContinued",
+      "title": "VALUES - (Continued)",
+      "level": 0,
+      "summary": "The document slice continues to elaborate on the topic of \"VALUES,\" likely expanding on previously introduced concepts or details related to this subject.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_34"
+      ],
+      "key_entities": [
+        "Continued"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_IvEmpowerment",
+      "title": "Iv) Empowerment",
+      "level": 0,
+      "summary": "The document outlines a commitment to empowering employees by recognizing them as valuable resources and encouraging the delegation of duties and responsibilities.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_35",
+        "CBE ANNUAL REPORT 2023-24_text_36",
+        "CBE ANNUAL REPORT 2023-24_text_37",
+        "CBE ANNUAL REPORT 2023-24_text_38",
+        "CBE ANNUAL REPORT 2023-24_text_39",
+        "CBE ANNUAL REPORT 2023-24_text_40"
+      ],
+      "key_entities": [
+        "We",
+        "Empowerment",
+        "Iv"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_VInnovativeOrganization",
+      "title": "V) Innovative Organization",
+      "level": 0,
+      "summary": "The document emphasizes an innovative organizational approach that prioritizes leveraging technology to solve stakeholder problems and proactively adapting to internal and external changes through continuous improvement.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_41",
+        "CBE ANNUAL REPORT 2023-24_text_42",
+        "CBE ANNUAL REPORT 2023-24_text_43",
+        "CBE ANNUAL REPORT 2023-24_text_44",
+        "CBE ANNUAL REPORT 2023-24_text_45"
+      ],
+      "key_entities": [
+        "We",
+        "Innovative Organization"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_ViTeamwork",
+      "title": "Vi) Teamwork",
+      "level": 0,
+      "summary": "The document slice emphasizes the importance of teamwork by highlighting mutual respect, cooperation, and its critical role in achieving success.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_46",
+        "CBE ANNUAL REPORT 2023-24_text_47",
+        "CBE ANNUAL REPORT 2023-24_text_48",
+        "CBE ANNUAL REPORT 2023-24_text_49"
+      ],
+      "key_entities": [
+        "Vi",
+        "Teamwork",
+        "We"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_ViiRespectforDiversity",
+      "title": "Vii) Respect for Diversity",
+      "level": 0,
+      "summary": "The document slice emphasizes the organization's commitment to respecting and valuing diversity by being responsive to cultural, ethical, religious, and other values of employees and customers, and by appreciating diverse ideas and viewpoints.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_50",
+        "CBE ANNUAL REPORT 2023-24_text_51",
+        "CBE ANNUAL REPORT 2023-24_text_52",
+        "CBE ANNUAL REPORT 2023-24_text_53",
+        "CBE ANNUAL REPORT 2023-24_text_54",
+        "CBE ANNUAL REPORT 2023-24_text_55"
+      ],
+      "key_entities": [
+        "Diversity",
+        "Vii",
+        "We",
+        "Respect"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_ViiiCorporateCitizenship",
+      "title": "Viii) Corporate Citizenship",
+      "level": 0,
+      "summary": "The document emphasizes the organization's commitment to corporate citizenship by valuing its role in national development, adhering to laws in Ethiopia and other countries, and upholding its responsibilities in business operations.",
+      "page_start": 5,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_56",
+        "CBE ANNUAL REPORT 2023-24_text_57",
+        "CBE ANNUAL REPORT 2023-24_text_58",
+        "CBE ANNUAL REPORT 2023-24_text_59",
+        "CBE ANNUAL REPORT 2023-24_text_60"
+      ],
+      "key_entities": [
+        "Ethiopia",
+        "We",
+        "Corporate Citizenship",
+        "Viii"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    },
+    {
+      "id": "CBE ANNUAL REPORT 2023-24_iii",
+      "title": "iii",
+      "level": 0,
+      "summary": "The document provides a comprehensive overview of an organization's structure, values, and performance, including leadership profiles, strategic vision and mission, financial highlights, and statements on global and domestic economic conditions, alongside key governance and advisory committee details.",
+      "page_start": 3,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "CBE ANNUAL REPORT 2023-24_text_61",
+        "CBE ANNUAL REPORT 2023-24_table_62"
+      ],
+      "key_entities": [
+        "The Global Economy",
+        "The Ethiopian Economy",
+        "Inco"
+      ],
+      "data_types_present": [
+        "text",
+        "table"
+      ]
+    }
+  ]
+}
