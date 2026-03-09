@@ -5,6 +5,7 @@
   "figures": [],
   "metadata": {
     "vision_strategy_used": true,
-    "final_strategy": "C"
+    "final_strategy": "C (Final Fallback)",
+    "total_cost_usd": 0.0
   }
 }

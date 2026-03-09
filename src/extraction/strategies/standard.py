@@ -30,18 +30,15 @@ class StandardExtractionStrategy(BaseExtractionStrategy):
 
                 if text:
                     pages_with_text += 1
-                    words = page.extract_words()
-                    for word in words:
-                        extracted_doc.text_blocks.append(TextBlock(
-                            text=word["text"],
-                            bbox=BBox(
-                                x=float(word["x0"]),
-                                y=float(word["top"]),
-                                w=float(word["x1"] - word["x0"]),
-                                h=float(word["bottom"] - word["top"])
-                            ),
-                            page_number=page_num
-                        ))
+                if text:
+                    pages_with_text += 1
+                    # Extract text as a single block per page to avoid word-level fragmentation
+                    # Provenance is maintained at the page level for now.
+                    extracted_doc.text_blocks.append(TextBlock(
+                        text=text,
+                        bbox=BBox(x=0, y=0, w=1000, h=1000), # Full page for now
+                        page_number=page_num
+                    ))
 
         confidence = total_conf / total_pages if total_pages > 0 else 0.0
         return extracted_doc, float(confidence)

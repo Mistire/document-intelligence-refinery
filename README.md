@@ -16,7 +16,7 @@ The **Document Intelligence Refinery** solves the "last mile" problem of enterpr
 - **Multi-Strategy Extraction (A→B→C)** — Routes documents through a confidence-gated escalation pipeline: Fast Text → Layout-Aware (Docling) → Vision VLM.
 - **Semantic Chunking** — Implements 5 enforced **Logical Document Unit (LDU)** rules to preserve table integrity and section context.
 - **PageIndex Builder** — Generates a hierarchical navigation tree with LLM-powered section summaries.
-- **Query Agent** — LangGraph agent with 3 tools: `pageindex_navigate`, `semantic_search`, `structured_query`.
+- **Query Agent** — LangGraph agent with 3 tools: `pageindex_navigate`, `semantic_search`, `structured_query`.M
 - **Provenance-First Design** — Every chunk carries spatial metadata (BBox), content hashes, and page references for 100% traceability.
 - **Audit Mode** — Verify claims against source citations or flag as "unverifiable".
 

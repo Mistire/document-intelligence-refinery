@@ -24,9 +24,10 @@ class VisionExtractor(BaseExtractionStrategy):
                 config = yaml.safe_load(f)
                 self.v_config = config.get("extraction", {"max_vision_pages": 5})
         
-        # Initialize LLM via OpenRouter
+        # Initialize Vision LLM via OpenRouter (must be a vision-capable model)
+        vision_model = os.getenv("VISION_MODEL_NAME", "qwen/qwen2.5-vl-32b-instruct:free")
         self.llm = ChatOpenAI(
-            model=os.getenv("MODEL_NAME", "openrouter/auto:free"),
+            model=vision_model,
             openai_api_key=os.getenv("OPENROUTER_API_KEY"),
             openai_api_base=os.getenv("OPENROUTER_URL", "https://openrouter.ai/api/v1"),
             max_tokens=4096

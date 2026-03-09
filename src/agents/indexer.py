@@ -81,12 +81,15 @@ class PageIndexBuilder:
                 
                 parent_id = node_id
             
-        # 2. Post-process: Generate summaries and extract entities
+        # 2. Post-process: Generate summaries and extract entities in parallel
+        from concurrent.futures import ThreadPoolExecutor
+        
         chunk_map = {c.chunk_id: c for c in chunks}
-        for node in sections.values():
+        nodes_to_process = list(sections.values())
+        
+        def process_node(node):
             # Combine text from direct chunks and potentially child chunks for context
             all_chunk_ids = list(node.chunk_ids)
-            # (In a more complex implementation, we'd recursively collect child chunk IDs)
             
             if all_chunk_ids:
                 combined_text = ""
@@ -99,6 +102,11 @@ class PageIndexBuilder:
                 node.key_entities = list(set(entities))[:8]
             else:
                 node.summary = "Structural section containing sub-chapters."
+            return node
+
+        print(f"⚡ Parallelizing summary generation for {len(nodes_to_process)} nodes...")
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            list(executor.map(process_node, nodes_to_process))
         
         return PageIndex(doc_id=doc_id, root_nodes=root_nodes)
 

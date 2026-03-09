@@ -29,12 +29,40 @@ class SemanticChunker:
         self.max_tokens = max_tokens
         self.validator = ChunkValidator()
 
+    def _flush_buffer(self, chunks: List[LDU], buffer: List[str], pages: List[int], headers: List[str], doc_id: str):
+        if not buffer:
+            return
+            
+        full_content = " ".join(buffer) # Use space for merging regular text
+        chunk_id = f"{doc_id}_text_{len(chunks)}"
+        
+        ldu = LDU(
+            chunk_id=chunk_id,
+            doc_id=doc_id,
+            content=full_content,
+            content_hash=hashlib.sha256(full_content.encode()).hexdigest(),
+            page_refs=sorted(list(set(pages))),
+            chunk_type="text",
+            bbox=BBox(x=0, y=0, w=1000, h=1000), # Approximated for merged blocks
+            parent_headers=list(headers)
+        )
+        
+        # Resolve Cross-refs in the merged content
+        refs = re.findall(r'(?:see|refer to|in)\s+(Table\s+\d+|Section\s+[\d\.]+|Figure\s+\d+)', full_content, re.I)
+        if refs:
+            ldu.source_metadata["cross_refs"] = list(set(refs))
+            
+        chunks.append(ldu)
+
     def chunk_document(self, doc: ExtractedDocument) -> List[LDU]:
         chunks = []
         current_headers = []
         
-        # 1. Process Text Blocks with Header Detection and List Grouping
+        # 1. Process Text Blocks with Header Detection and Merging
         i = 0
+        merged_buffer = []
+        buffer_page_refs = []
+        
         while i < len(doc.text_blocks):
             block = doc.text_blocks[i]
             content = block.text.strip()
@@ -43,16 +71,27 @@ class SemanticChunker:
                 i += 1
                 continue
 
-            # Header Detection (Heuristic: Short lines, no ending punctuation, or explicit common header patterns)
-            # We exclude lines that look like list items from being headers.
+            # Header Detection
             is_list_item = re.match(r'^(\d+\.|[A-Za-z]\.|•|\-)\s+', content)
+            is_potential_header = len(content) < 100 and not content.endswith(('.', '?', '!')) and not is_list_item
             
-            if len(content) < 100 and not content.endswith(('.', '?', '!')) and not is_list_item:
-                # Heuristic: if it's a short line, treat as potential header
-                current_headers = [content] 
+            # If we hit a new header, flush the buffer
+            if is_potential_header and merged_buffer:
+                self._flush_buffer(chunks, merged_buffer, buffer_page_refs, current_headers, doc.doc_id)
+                merged_buffer = []
+                buffer_page_refs = []
+
+            if is_potential_header:
+                current_headers = [content]
 
             # List Grouping
             if is_list_item:
+                # Flush buffer before list
+                if merged_buffer:
+                    self._flush_buffer(chunks, merged_buffer, buffer_page_refs, current_headers, doc.doc_id)
+                    merged_buffer = []
+                    buffer_page_refs = []
+                
                 list_items = [content]
                 page_refs = [block.page_number]
                 bbox = block.bbox
@@ -82,24 +121,21 @@ class SemanticChunker:
                     parent_headers=list(current_headers)
                 ))
             else:
-                # Regular Text Block
-                chunk_id = f"{doc.doc_id}_text_{len(chunks)}"
-                ldu = LDU(
-                    chunk_id=chunk_id,
-                    doc_id=doc.doc_id,
-                    content=content,
-                    content_hash=hashlib.sha256(content.encode()).hexdigest(),
-                    page_refs=[block.page_number],
-                    chunk_type="text",
-                    bbox=block.bbox,
-                    parent_headers=list(current_headers)
-                )
-                # 4. Resolve Cross-refs
-                refs = re.findall(r'(?:see|refer to|in)\s+(Table\s+\d+|Section\s+[\d\.]+|Figure\s+\d+)', content, re.I)
-                if refs:
-                    ldu.source_metadata["cross_refs"] = list(set(refs))
-                chunks.append(ldu)
+                # Buffer regular text
+                merged_buffer.append(content)
+                if block.page_number not in buffer_page_refs:
+                    buffer_page_refs.append(block.page_number)
+                
+                # If buffer exceeds ~1000 tokens (approx 4000 chars), flush
+                if sum(len(c) for c in merged_buffer) > 4000:
+                    self._flush_buffer(chunks, merged_buffer, buffer_page_refs, current_headers, doc.doc_id)
+                    merged_buffer = []
+                    buffer_page_refs = []
             i += 1
+        
+        # Final flush
+        if merged_buffer:
+            self._flush_buffer(chunks, merged_buffer, buffer_page_refs, current_headers, doc.doc_id)
             
         # 2. Process Tables (Already Preserved as Units)
         for table in doc.tables:

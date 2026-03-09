@@ -1,0 +1,19 @@
+{
+  "doc_id": "Internship report",
+  "filename": "Internship report.pdf",
+  "total_pages": 10,
+  "origin_type": "native_digital",
+  "layout_complexity": "single_column",
+  "language": "en",
+  "domain_hint": "legal",
+  "extraction_cost": "fast_text_sufficient",
+  "confidence_scores": {
+    "origin_type": 1.0,
+    "layout_complexity": 0.9,
+    "domain_hint": 0.8
+  },
+  "avg_char_density": 0.003932296824453687,
+  "avg_image_ratio": 0.015721785873440287,
+  "total_tables_found": 0,
+  "triage_timestamp": "2026-03-09T14:07:24.954118"
+}

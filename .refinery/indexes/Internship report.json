@@ -1,0 +1,33 @@
+{
+  "doc_id": "Internship report",
+  "root_nodes": [
+    {
+      "id": "Internship report_Overview",
+      "title": "Overview",
+      "level": 0,
+      "summary": "The document is an internship report by Mistire Daniel, a 4th-year Software Engineering student, detailing her experience at Kifiya Financial Technology, a leading Ethiopian fintech company, and outlining its background, organizational structure, and key departments.",
+      "page_start": 1,
+      "page_end": 5,
+      "parent_id": null,
+      "child_nodes": [],
+      "chunk_ids": [
+        "Internship report_text_0",
+        "Internship report_text_1",
+        "Internship report_text_2"
+      ],
+      "key_entities": [
+        "Inst Befekadu\nSubmission",
+        "Over",
+        "Company Supervisor",
+        "Table",
+        "Semester",
+        "Introduction",
+        "Chief",
+        "Products"
+      ],
+      "data_types_present": [
+        "text"
+      ]
+    }
+  ]
+}

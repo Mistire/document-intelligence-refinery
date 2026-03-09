@@ -1,5 +1,6 @@
 import os
 import json
+import time
 from typing import List, Dict, Any, Annotated, TypedDict
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, ToolMessage
@@ -22,6 +23,7 @@ class AgentState(TypedDict):
     doc_id: str
     provenance: List[ProvenanceEntry]
     final_answer: str
+    iteration: int
 
 class QueryInterfaceAgent:
     def __init__(self, doc_id: str):
@@ -54,6 +56,7 @@ class QueryInterfaceAgent:
         # Define Nodes
         workflow.add_node("agent", self._call_model)
         workflow.add_node("tools", ToolNode(self._get_tools()))
+        workflow.add_node("summarize", self._summarize)
         
         # Define Edges
         workflow.set_entry_point("agent")
@@ -62,10 +65,12 @@ class QueryInterfaceAgent:
             self._should_continue,
             {
                 "continue": "tools",
+                "summarize": "summarize",
                 "end": END
             }
         )
         workflow.add_edge("tools", "agent")
+        workflow.add_edge("summarize", END)
         
         return workflow.compile()
 
@@ -73,6 +78,8 @@ class QueryInterfaceAgent:
         @tool
         def pageindex_navigate(query: str) -> str:
             """Traverse the hierarchical PageIndex to find relevant sections."""
+            print(f"  [Tool] Navigating PageIndex for: {query}")
+            start = time.time()
             if not self.page_index:
                 return "PageIndex not available for this document."
             
@@ -84,12 +91,16 @@ class QueryInterfaceAgent:
                     search_tree(node.child_nodes)
             
             search_tree(self.page_index.root_nodes)
+            print(f"  [Tool] PageIndex finished in {time.time() - start:.2f}s")
             return json.dumps(matches[:3], indent=2)
 
         @tool
         def semantic_search(query: str) -> str:
             """Perform a vector search over document chunks. Returns chunks with Provenance."""
+            print(f"  [Tool] Searching vector store for: {query}")
+            start = time.time()
             results = self.vector_store.search_chunks(query, k=5, filter={"doc_id": self.doc_id})
+            print(f"  [Tool] Vector search finished in {time.time() - start:.2f}s")
             return json.dumps(results, indent=2)
 
         @tool
@@ -119,35 +130,70 @@ class QueryInterfaceAgent:
         return [pageindex_navigate, semantic_search, structured_query, audit_claim]
 
     def _call_model(self, state: AgentState):
+        iteration = state.get("iteration", 0)
+        print(f"  [Agent] Loop {iteration+1} | Calling LLM ({len(state['messages'])} messages)...")
+        start = time.time()
+        
         prompt = ChatPromptTemplate.from_messages([
             ("system", "You are the Document Intelligence Refinery Assistant. "
-                        f"You are currently analyzing document: {state['doc_id']}. "
-                        "Use the provided tools to find specific information. "
-                        "CRITICAL: CBE refers to 'Commercial Bank of Ethiopia', NOT 'Central Bank of Egypt'. "
-                        "Only answer based on the provided document context. If the information is not present, say so. "
-                        "ALWAYS include a JSON 'provenance_chain' in your final answer containing "
-                        "page_number, bbox (x,y,w,h), and content_hash for every fact. "
-                        "If you cannot verify a claim, use the audit_claim tool to flag it."),
+                        f"Analyzing: {state['doc_id']}. "
+                        "1. Use tools to find info. DO NOT repeat the same query if it fails. "
+                        "2. Search only twice for the same info before concluding. "
+                        "3. ALWAYS include a JSON 'provenance_chain' in your final answer containing "
+                        "page_number, bbox (x,y,w,h), and content_hash for every fact."),
             MessagesPlaceholder(variable_name="messages"),
         ])
         
         chain = prompt | self.llm.bind_tools(self._get_tools())
         response = chain.invoke(state)
+        print(f"  [Agent] LLM responded in {time.time() - start:.2f}s")
+        return {"messages": [response], "iteration": iteration + 1}
+
+    def _summarize(self, state: AgentState):
+        print(f"  [Agent] Generating final summary...")
+        start = time.time()
+        # Filter messages to only include important history if it gets too long
+        # But for now, we'll try just being more direct in the prompt
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", "You are the Document Intelligence Refinery Assistant. "
+                        "You have reached the maximum search limit for this query. "
+                        "Review the research history provided below and provide a final, consolidated answer. "
+                        "If you found the info, present it clearly with provenance. "
+                        "If the info is definitely not there, explain what you searched for and why it yielded no results."),
+            MessagesPlaceholder(variable_name="messages"),
+            ("human", "Provide your final response now based on the above logs. Do not call any more tools.")
+        ])
+        chain = prompt | self.llm
+        response = chain.invoke(state)
+        print(f"  [Agent] Summary generated in {time.time() - start:.2f}s | Content length: {len(response.content)}")
+        if not response.content:
+            print("  [Warning] Model returned EMPTY content in summary node!")
+            # Fallback content
+            response.content = "I searched the document multiple times but could not find a definitive answer to your question. Please try a different query."
+            
         return {"messages": [response]}
 
     def _should_continue(self, state: AgentState):
         last_message = state["messages"][-1]
+        iteration = state.get("iteration", 0)
+        
         if last_message.tool_calls:
+            if iteration >= 5:
+                return "summarize"
             return "continue"
         return "end"
 
     def run_query(self, query: str) -> str:
+        print(f"🔍 Starting query execution...")
+        start_time = time.time()
         state = {
             "messages": [HumanMessage(content=query)],
             "doc_id": self.doc_id,
             "provenance": [],
-            "final_answer": ""
+            "final_answer": "",
+            "iteration": 0
         }
         
         final_state = self.graph.invoke(state)
+        print(f"✨ Query execution finished in {time.time() - start_time:.2f}s")
         return final_state["messages"][-1].content

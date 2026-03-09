@@ -9,20 +9,33 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class VectorStoreManager:
+    _embeddings_cache = None
+
     def __init__(self, persist_directory: str = ".refinery/chroma"):
         self.persist_directory = Path(persist_directory)
         self.persist_directory.mkdir(parents=True, exist_ok=True)
-        
-        # Initialize Local Embeddings (Fast, Free, Offline-ready)
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
-        )
-        
-        self.vector_store = Chroma(
-            collection_name="refinery_chunks",
-            embedding_function=self.embeddings,
-            persist_directory=str(self.persist_directory)
-        )
+        self.vector_store_instance = None
+
+    @property
+    def embeddings(self):
+        if VectorStoreManager._embeddings_cache is None:
+            print("🚀 Loading embedding model (first-time only)...")
+            from langchain_huggingface import HuggingFaceEmbeddings
+            VectorStoreManager._embeddings_cache = HuggingFaceEmbeddings(
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                model_kwargs={'device': 'cpu'}
+            )
+        return VectorStoreManager._embeddings_cache
+
+    @property
+    def vector_store(self):
+        if self.vector_store_instance is None:
+            self.vector_store_instance = Chroma(
+                collection_name="refinery_chunks",
+                embedding_function=self.embeddings,
+                persist_directory=str(self.persist_directory)
+            )
+        return self.vector_store_instance
 
     def ingest_chunks(self, chunks: List[LDU]):
         print(f"📥 Ingesting {len(chunks)} chunks into ChromaDB...")

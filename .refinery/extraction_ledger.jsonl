@@ -7,3 +7,15 @@
 {"doc_id": "CBE ANNUAL REPORT 2023-24", "strategy": "B", "output_path": ".refinery/extractions/CBE ANNUAL REPORT 2023-24/extracted.json", "timestamp": "2026-03-08T03:39:34.242723", "status": "completed"}
 {"doc_id": "CBE ANNUAL REPORT 2023-24", "strategy": "B", "output_path": ".refinery/extractions/CBE ANNUAL REPORT 2023-24/extracted.json", "timestamp": "2026-03-08T04:00:59.378060", "status": "completed"}
 {"doc_id": "tax_expenditure_ethiopia_2021_22", "strategy": "B", "output_path": ".refinery/extractions/tax_expenditure_ethiopia_2021_22/extracted.json", "timestamp": "2026-03-08T04:13:50.900522", "status": "completed"}
+{"doc_id": "Audit Report - 2023", "strategy": "C (Final Fallback)", "output_path": ".refinery/extractions/Audit Report - 2023/extracted.json", "timestamp": "2026-03-09T11:41:24.997411", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T11:55:22.004526", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T11:59:36.770766", "status": "completed"}
+{"doc_id": "fta_performance_survey_final_report_2022", "strategy": "B", "output_path": ".refinery/extractions/fta_performance_survey_final_report_2022/extracted.json", "timestamp": "2026-03-09T12:00:49.502494", "status": "completed"}
+{"doc_id": "Audit Report - 2023", "strategy": "C (Final Fallback)", "output_path": ".refinery/extractions/Audit Report - 2023/extracted.json", "timestamp": "2026-03-09T12:00:54.516681", "status": "completed"}
+{"doc_id": "CBE ANNUAL REPORT 2023-24", "strategy": "B", "output_path": ".refinery/extractions/CBE ANNUAL REPORT 2023-24/extracted.json", "timestamp": "2026-03-09T12:01:45.635570", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T12:02:32.788231", "status": "completed"}
+{"doc_id": "tax_expenditure_ethiopia_2021_22", "strategy": "B", "output_path": ".refinery/extractions/tax_expenditure_ethiopia_2021_22/extracted.json", "timestamp": "2026-03-09T12:02:35.796511", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T13:04:24.365233", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T13:14:43.862301", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T13:53:52.939296", "status": "completed"}
+{"doc_id": "Internship report", "strategy": "A", "output_path": ".refinery/extractions/Internship report/extracted.json", "timestamp": "2026-03-09T14:07:48.298636", "status": "completed"}

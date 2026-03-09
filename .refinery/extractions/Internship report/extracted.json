@@ -1,0 +1,61 @@
+{
+  "doc_id": "Internship report",
+  "text_blocks": [
+    {
+      "text": "Internship Report on Kifiya Financial Technology\nFull Name: Mistire Daniel\nCollege: College of Engineering\nDepartment: Software Engineering Department\nYear/Semester: 4th year 2nd semster\nInternship Organization/Company: Kifiya Financial Technology\nInternship Duration: From June 11 To September 10\nCompany Supervisor: Addis Yehasab\nSubmitted to: Inst Befekadu\nSubmission date: 16/09/2025",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1000.0,
+        "h": 1000.0
+      },
+      "page_number": 1
+    },
+    {
+      "text": "Table of Contents\nChapter One: Introduction.........................................................................................................................2\n1.1 Brief Background of the Company/Organization..............................................................................2\n1.2 Purpose of the Internship...................................................................................................................2\n1.3 Objectives of the Internship...............................................................................................2\n1.4 Projects Undertaken...........................................................................................................................2\n1.5 Activities and Responsibilities on the Project...................................................................................3\nChapter Two: Organization Profile............................................................................................................3\n2.1 History of the Company/Organization...............................................................................................3\n2.2 Vision, Mission, and Core Values......................................................................................................3\n2.3 Organizational Structure....................................................................................................................4\n2.4 Products and Services Offered...........................................................................................................4\nChapter Three: Internship Experience......................................................................................................5\n3.1 Introduction.......................................................................................................................................5\n3.2 Roles and Responsibilities.................................................................................................................5\n3.3 Projects Undertaken...........................................................................................................................6\n3.4 Skills Acquired..................................................................................................................................6\nChapter Four: Observations & Experience...............................................................................................6\n4.1 Observations on the Professional Environment.................................................................................6\n4.2 Challenges Faced During the Internship...........................................................................................6\n4.3 How I Overcame These Challenges..................................................................................................7\n4.4 Contribution to the Organization.......................................................................................................7\nChapter Five: Skills & Knowledge Gained................................................................................................7\n5.1 Academic Knowledge Applied in Real Work...................................................................................7\n5.2 New Skills Learned...........................................................................................................................7\n5.3 Personal Growth................................................................................................................................8\nChapter Six: Conclusion & Recommendations.........................................................................................8\n6.1 Summary of the Overall Experience.................................................................................................8\n6.2 How the Internship Helped My Career Goals...................................................................................8\n6.3 Suggestions for Improving the Internship Program..........................................................................8\n6.4 Future Career Direction.....................................................................................................................9\nReferences.....................................................................................................................................................9\n1",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1000.0,
+        "h": 1000.0
+      },
+      "page_number": 2
+    },
+    {
+      "text": "Chapter One: Introduction\n1.1 Brief Background of the Company/Organization\nKifiya Financial Technology is a leading fintech company in Ethiopia, established in 2010 with the goal\nof expanding access to affordable and innovative financial services. Over the years, Kifiya has pioneered\ndigital solutions that enable individuals, businesses, and institutions to participate more effectively in the\nfinancial ecosystem. Through products such as digital credit and payments infrastructure, device and asset\nfinancing, AgriTech solutions, and AI-driven platforms like Michu, Kifiya has become a driving force in\npromoting financial inclusion and digital transformation in Ethiopia.\n1.2 Purpose of the Internship\nThe purpose of this internship was to make us understand how the real-world works and functions as a\nSoftware Engineer.. It provided an opportunity to gain first-hand exposure to the daily operations,\ntechnologies, and workflows of a leading financial technology company.\n1.3 Objectives of the Internship\nThe main objectives of the internship were:\n● To gain practical experience in software engineering within a professional fintech environment.\n● To develop technical, problem-solving, and teamwork skills through involvement in real-world\nprojects.\n1.4 Projects Undertaken\nDuring the internship, I was assigned to work on the Admin Portal of the Unified Interoperable Rural\nAgent & Network Management Platform, a digital financial system designed to unify fragmented rural\nfinancial services. The platform enables agents and merchants to perform a wide range of transactions\nsuch as cash-in/cash-out, bill payments, mobile money, and merchant payments through a single\ninteroperable wallet, while also supporting offline transactions with NFC smart cards.\nThe Admin Portal I contributed to serves as the central management interface for different administrative\nroles, including the platform admin, network manager, support agent, and finance admin. Through this\nportal, administrators can manage agents and merchants, monitor transactions, configure services, and\noversee reporting and compliance. It is connected to the system’s microservices via a dedicated\nBackend-for-Frontend (BFF) layer, which ensures efficient communication and tailored APIs for frontend\nuse.\n2",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1000.0,
+        "h": 1000.0
+      },
+      "page_number": 3
+    },
+    {
+      "text": "1.5 Activities and Responsibilities on the Project\nMy responsibilities included:\n● Assisting in the design and development of the Admin Portal, focusing on dashboards and\nrole-based interfaces for platform admins, network managers, support agents, and finance admins.\n● Building and styling UI components to support workflows such as agent/merchant management,\ntransaction monitoring, service configuration, and reporting.\n● Integrating frontend components with the Backend-for-Frontend (BFF) layer using Redux Toolkit\nfor state management and API communication.\n● Writing clean, maintainable, and testable code in line with industry best practices.\nChapter Two: Organization Profile\n2.1 History of the Company/Organization\nKifiya Financial Technology was founded in 2010 by Munir Duri, with the mission of democratizing\naccess to financial services across Ethiopia. Initially, the company focused on digitizing utility bill\npayments through a Build-Operate-Transfer (BOT) model, aiming to simplify transactions and increase\naccessibility. Over time, Kifiya expanded its offerings to include digital credit platforms, device\nfinancing, and AgriTech solutions, solidifying its position as a leader in Ethiopia's fintech sector. The\ncompany's growth has been marked by strategic partnerships with governmental and non-governmental\norganizations, as well as recognition for its innovative approach to financial inclusion.\n2.2 Vision, Mission, and Core Values\n● Vision:\nTo make a contribution to add value to the lives of people by making transactions simple,\naffordable, and within reach.\n● Mission:\nTo create an integrated, scalable technology-based services infrastructure that provides\ncustomer-friendly payment services and enables access to financial and non-financial transaction\nservices.\n● Core Values:\n○ Innovation: Embracing new ideas and technologies to drive progress.\n○ Inclusivity: Ensuring that financial services are accessible to all segments of society.\n○ Integrity: Conducting business in an ethical and transparent manner.\n○ Collaboration: Working together with partners and stakeholders to achieve common\ngoals.\n○ Customer-Centricity: Prioritizing the needs and satisfaction of customers in all\nendeavors.\n3",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1000.0,
+        "h": 1000.0
+      },
+      "page_number": 4
+    },
+    {
+      "text": "2.3 Organizational Structure\nKifiya operates with a hierarchical organizational structure designed to foster efficiency and innovation.\nAt the helm is the Chief Executive Officer (CEO), Munir Duri, who oversees the company's strategic\ndirection. Reporting directly to the CEO are several key executives responsible for various departments:\n● Chief of Products:\nJohn Guchuhi leads the product development initiatives, focusing on creating and enhancing\ndigital solutions that meet customer needs.\n● IT General Manager:\nHabitamu Azezew manages the company's IT infrastructure, ensuring the reliability and security\nof its technological systems.\n● Head of Marketing Digital Lending:\nLewam Assefa oversees marketing strategies for digital lending products, aiming to increase\nawareness and adoption among target audiences.\n● Chief Impact Officer:\nHayat Abdulmalik is responsible for driving the company’s social impact agenda, ensuring that\nKifiya’s innovations contribute to financial inclusion and sustainable development.\n● Chief Information Officer (CIO):\nAlazar Negesu leads the information systems, data strategy, and ensures the integrity, security,\nand performance of Kifiya’s technological environment.\n● Chief of Staff:\nWoyneab Habte manages internal coordination, strategic planning, and assists the CEO in\nexecuting organizational initiatives.\nThis leadership team collaborates closely to drive Kifiya's mission and objectives, ensuring that the\ncompany remains at the forefront of fintech innovation in Ethiopia.\n2.4 Products and Services Offered\nKifiya offers a diverse range of products and services tailored to meet the needs of various customer\nsegments:\n4",
+      "bbox": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1000.0,
+        "h": 1000.0
+      },
+      "page_number": 5
+    }
+  ],
+  "tables": [],
+  "figures": [],
+  "metadata": {
+    "final_strategy": "A",
+    "total_cost_usd": 0.0
+  }
+}
